@@ -5,6 +5,7 @@ import 'package:helloapp/ListViewExample.dart';
 import 'package:helloapp/Palette.dart';
 import 'Student.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:developer' as developer;
 
 
 //https://www.youtube.com/watch?v=1Y6o1DOUJcU
@@ -15,6 +16,13 @@ class Login extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
+
+addStringToSF(String key,String value) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setString(key, value);
+}
+
+
 
 class _LoginPageState extends State<Login> {
 
@@ -61,6 +69,8 @@ class _LoginPageState extends State<Login> {
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
 
+
+          developer.log(""+grNumberField.controller.text);
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => ListViewExample()),
