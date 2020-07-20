@@ -32,6 +32,8 @@ dependencies:
   cupertino_icons: ^0.1.3
   carousel_slider: ^2.2.1  #https://pub.dev/packages/carousel_slider
   flutter_progress_dialog: ^0.1.0  #https://github.com/dylanwuzh/flutter_progress_dialog
+  shared_preferences: ^0.5.8  #https://pub.dev/packages/shared_preferences #https://medium.com/flutterdevs/using-sharedpreferences-in-flutter-251755f07127
+
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,7 @@ import 'package:helloapp/BlackCherryFont.dart';
 import 'package:helloapp/ListViewExample.dart';
 import 'package:helloapp/Palette.dart';
 import 'Student.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 //https://www.youtube.com/watch?v=1Y6o1DOUJcU
