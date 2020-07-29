@@ -25,6 +25,9 @@ dependencies:
     sdk: flutter
   retrofit: any  #https://medium.com/globant-mobile-studio-india/easy-way-to-implement-rest-api-calls-in-flutter-9859d1ab5396
   logger: any
+  table_calendar: ^2.2.3   #https://pub.dev/packages/table_calendar
+  flutter_calendar_carousel: ^1.4.12
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -39,8 +42,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
   retrofit_generator: any
-  #build_runner: any
+  build_runner: any
 
 
 

@@ -15,6 +15,9 @@ class ListViewExample extends StatefulWidget {
 
 class _MyHomePageState extends State<ListViewExample> {
 
+
+
+
   final List<Student> nameList=[
 
     Student("Haris Shaikh","Male","10th","B","19,990"),
@@ -42,11 +45,63 @@ class _MyHomePageState extends State<ListViewExample> {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle style = TextStyle(fontFamily: 'BlackCherryFont', fontSize: 22.0);
+
+
+    final loginButon = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Palette.blueSky,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () {
+
+
+//          developer.log(""+grNumberField.controller.text);
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ListViewExample()),
+          );
+
+        },
+        child: Text("Add New",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontFamily: 'BlackCherryFont')),
+      ),
+    );
+
+
+
     return Container(
       color: Palette.primaryColor,
-      child:new ListView.builder(
-          itemCount:nameList.length,itemBuilder:(BuildContext context,int index)=>myCard(context,index)
-    )
+      child:Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: <Widget>[
+
+            SizedBox(height:10.0),
+            SizedBox(
+              height: 100.0,
+              child: Image.asset(
+                "assets/images/albarkaat_log.png",
+                fit: BoxFit.contain,
+              ),
+            ),
+            new Expanded(child:
+             ListView.builder(
+                itemCount:nameList.length,itemBuilder:(BuildContext context,int index)=>myCard(context,index)
+            )
+            )
+,
+            loginButon
+
+
+          ],
+        ),
+      ),
+
 
     );
   }

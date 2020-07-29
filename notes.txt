@@ -1,0 +1,4 @@
+To Enable Web Support for Flutter Project
+flutter channel beta
+flutter config --enable-web
+flutter run -d chrome

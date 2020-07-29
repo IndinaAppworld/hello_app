@@ -3,9 +3,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:helloapp/BlackCherryFont.dart';
 import 'package:helloapp/Palette.dart';
 import 'package:flutter_progress_dialog/flutter_progress_dialog.dart';
+import 'package:helloapp/rowcolumlearn.dart';
 
 import 'ListViewExample.dart';
 import 'Login.dart';
+import 'common/theme.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,10 +18,34 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
+      theme: appTheme,
       home: Login(title: appTitle),
+    );
+
+    return MaterialApp(
+
+    title: 'FriendlyChat',
+    theme: appTheme,
+    home: Scaffold(
+    appBar: AppBar(
+    title: Text('FriendlyChat'),
+    ),
+    ),
     );
   }
 }
+
+//final appTheme = ThemeData(
+//  primarySwatch: Colors.yellow,
+//  textTheme: TextTheme(
+//    headline1: TextStyle(
+//      fontFamily: 'Corben',
+//      fontWeight: FontWeight.w700,
+//      fontSize: 24,
+//      color: Colors.black,
+//    ),
+//  ),
+//);
 
 
 //class MyHomePage extends StatelessWidget {
